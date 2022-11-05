@@ -1,0 +1,191 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgba(243,246,253,255);
+  color: #9503a0;
+}
+body h1{
+  color: black;
+}
+/* nav */
+nav {
+  display: flex;
+  color: black;
+  justify-content: flex-end;
+  padding: 20px 30px;
+}
+nav a {
+  color: #5a0061;
+  text-decoration: none;
+  margin:0 20px;
+  display: block;
+  font-size: 1.3rem;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+nav .hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.menu{
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  padding:60px 20px;
+  font-size: 1.5rem;
+}
+.menu.show {
+  display: flex;
+}
+.menu a{
+  margin: 15px 0;
+  text-decoration: none;
+}
+.menu a:hover {
+  text-decoration: underline;
+}
+.menu .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* Home page */
+.home-page {
+  padding: 30px;
+}
+.home-page h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Counter page styling */
+.counter {
+  margin: 50px 0;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+.counter h1 {
+  text-align: center;
+}
+.counter > div {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+.counter input {
+  padding: 15px 25px;
+  font-size: 1.2rem;
+  outline: none;
+  border: 4px solid #545454;
+  border-radius: 30px;
+  /* width: 60px; */
+}
+
+.counter .count-num {
+  margin: 30px 0;
+}
+
+.counter .buttons-wrapper {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  height: 150px;
+  /* background-color: #001e62; */
+
+}
+.counter button {
+  background-color: white;
+  color: #001e62;
+  font-weight: bold;
+  padding: 14px 0;
+  width: 160px;
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  height: fit-content;
+  box-shadow: 0px 0px 3px 3px rgba(243,246,0,255);
+  transition: font-size 300ms ease-in-out;
+}
+
+.counter button:hover {
+  font-size: 1.3rem;
+}
+
+.counter a {
+  font-size: 1.3rem;
+}
+
+.test-error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  text-align: center;
+}
+.test-error label {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.test-error input {
+  width: 60%;
+  margin: 20px ;
+  padding: 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.error-boundary {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+
+
+@media (max-width : 800px) {
+  nav a{
+    display: none;
+  }
+  nav .hamburger-menu {
+    display: block;
+  }
+  .counter .buttons-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;  
+    height: fit-content;
+  }
+  .counter button {
+    margin: 10px 0;
+  }
+  .counter h1 {
+    text-align: center;
+    padding: 0 30px;
+  }
+  
+}
